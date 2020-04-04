@@ -55,10 +55,10 @@ class RoomController extends Controller
             return "";
         }
         $user = Yii::$app->user->getIdentity();
-        if is_null($user) {
+        if (is_null($user)) {
             return "";
         }
-        $email = $user->email;
+        $userEmail = $user->email;
         $userName = $user->displayName;
         $issuedAt = time();
         $notBefore = $issuedAt + 10; //Adding 10 seconds
